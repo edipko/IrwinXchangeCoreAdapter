@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" />
+	<soapenv:Body xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+		<wp:GetAssociatedWorkProductListRequest
+			xmlns:wp="http://uicds.org/WorkProductService" xmlns:precisb="http://www.saic.com/precis/2009/06/base">
+			<precisb:Identifier xmlns:precisb="http://www.saic.com/precis/2009/06/base"
+				precisb:label="">{THIS_IDENTIFIER}</precisb:Identifier>
+		</wp:GetAssociatedWorkProductListRequest>
+	</soapenv:Body>
+</soapenv:Envelope>
