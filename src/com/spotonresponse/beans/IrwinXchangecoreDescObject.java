@@ -2,52 +2,55 @@ package com.spotonresponse.beans;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import org.apache.commons.lang3.text.WordUtils;
 
 public class IrwinXchangecoreDescObject {
 
-	private String IrwinID;
-	private String RecordSource;
-	private String CreatedOnDateTime;
-	private String ModifiedOnDateTime;
-	private String InConflict;
-	private String UniqueFireIdentifier;
-	private String FireDiscoveryDateTime;
-	private String POOResponsibleUnit;
-	private String LocalIncidentIdentifier;
-	private String DispatchCenterID;
-	private String IncidentName;
-	private String FireCause;
-	private String IncidentTypeKind;
-	private String IncidentTypeCategory;
-	private String InitialLatitude;
-	private String InitialLongitude;
-	private String DiscoveryAcres;
-	private String POOLatitude;
-	private String POOLongitude;
-	private String POOOwnerUnit;
-	private String POOState;
-	private String POOCounty;
-	private String POOLandownerKind;
-	private String POOLandownerCategory;
-	private String FirecodeRequested;
-	private String FireCode;
-	private String FSJobCode;
-	private String FSOverrideCode;
-	private String IsComplex;
-	private String IsFSAssisted;
-	private String IsMultiJurisdictional;
-	private String IsTrespass;
-	private String IsReimbursable;
-	private String FireOutDateTime;
-	private String CreatedBySystem;
-	private String ModifiedBySystem;
-	private String GACC;
-	private String IsActive;
+	private String irwinid;
+	private String recordsource;
+	private String createdondatetime;
+	private String modifiedondatetime;
+	private String inconflict;
+	private String uniquefireidentifier;
+	private String firediscoverydatetime;
+	private String pooresponsibleunit;
+	private String localincidentidentifier;
+	private String dispatchcenterid;
+	private String incidentname;
+	private String firecause;
+	private String incidenttypekind;
+	private String incidenttypecategory;
+	private String initiallatitude;
+	private String initiallongitude;
+	private String discoveryacres;
+	private String poolatitude;
+	private String poolongitude;
+	private String pooownerunit;
+	private String poostate;
+	private String poocounty;
+	private String poolandownerkind;
+	private String poolandownercategory;
+	private String firecoderequested;
+	private String firecode;
+	private String fsjobcode;
+	private String fsoverridecode;
+	private String iscomplex;
+	private String isfsassisted;
+	private String ismultijurisdictional;
+	private String istrespass;
+	private String isreimbursable;
+	private String fireoutdatetime;
+	private String createdbysystem;
+	private String modifiedbysystem;
+	private String gacc;
+	private String isactive;
+
 	
 		
 	public boolean add(IrwinXchangecoreDescObject obj, String key, String value) {
 		try {
-			Method method = IrwinXchangecoreDescObject.class.getMethod("set" + key, String.class);
+			String capitolKey = WordUtils.capitalize(key.toLowerCase());	
+			Method method = IrwinXchangecoreDescObject.class.getMethod("set" + capitolKey, String.class);
 			method.invoke(obj, new String(value));
 		} catch (NoSuchMethodException e) {
 			// TODO Auto-generated catch block
@@ -67,233 +70,462 @@ public class IrwinXchangecoreDescObject {
 		}
 		return true;
 	}
+
+
+
+	public String getIrwinid() {
+		return irwinid;
+	}
+
+
+
+	public void setIrwinid(String irwinid) {
+		this.irwinid = irwinid;
+	}
+
+
+
+	public String getRecordsource() {
+		return recordsource;
+	}
+
+
+
+	public void setRecordsource(String recordsource) {
+		this.recordsource = recordsource;
+	}
+
+
+
+	public String getCreatedondatetime() {
+		return createdondatetime;
+	}
+
+
+
+	public void setCreatedondatetime(String createdondatetime) {
+		this.createdondatetime = createdondatetime;
+	}
+
+
+
+	public String getModifiedondatetime() {
+		return modifiedondatetime;
+	}
+
+
+
+	public void setModifiedondatetime(String modifiedondatetime) {
+		this.modifiedondatetime = modifiedondatetime;
+	}
+
+
+
+	public String getInconflict() {
+		return inconflict;
+	}
+
+
+
+	public void setInconflict(String inconflict) {
+		this.inconflict = inconflict;
+	}
+
+
+
+	public String getUniquefireidentifier() {
+		return uniquefireidentifier;
+	}
+
+
+
+	public void setUniquefireidentifier(String uniquefireidentifier) {
+		this.uniquefireidentifier = uniquefireidentifier;
+	}
+
+
+
+	public String getFirediscoverydatetime() {
+		return firediscoverydatetime;
+	}
+
+
+
+	public void setFirediscoverydatetime(String firediscoverydatetime) {
+		this.firediscoverydatetime = firediscoverydatetime;
+	}
+
+
+
+	public String getPooresponsibleunit() {
+		return pooresponsibleunit;
+	}
+
+
+
+	public void setPooresponsibleunit(String pooresponsibleunit) {
+		this.pooresponsibleunit = pooresponsibleunit;
+	}
+
+
+
+	public String getLocalincidentidentifier() {
+		return localincidentidentifier;
+	}
+
+
+
+	public void setLocalincidentidentifier(String localincidentidentifier) {
+		this.localincidentidentifier = localincidentidentifier;
+	}
+
+
+
+	public String getDispatchcenterid() {
+		return dispatchcenterid;
+	}
+
+
+
+	public void setDispatchcenterid(String dispatchcenterid) {
+		this.dispatchcenterid = dispatchcenterid;
+	}
+
+
+
+	public String getIncidentname() {
+		return incidentname;
+	}
+
+
+
+	public void setIncidentname(String incidentname) {
+		this.incidentname = incidentname;
+	}
+
+
+
+	public String getFirecause() {
+		return firecause;
+	}
+
+
+
+	public void setFirecause(String firecause) {
+		this.firecause = firecause;
+	}
+
+
+
+	public String getIncidenttypekind() {
+		return incidenttypekind;
+	}
+
+
+
+	public void setIncidenttypekind(String incidenttypekind) {
+		this.incidenttypekind = incidenttypekind;
+	}
+
+
+
+	public String getIncidenttypecategory() {
+		return incidenttypecategory;
+	}
+
+
+
+	public void setIncidenttypecategory(String incidenttypecategory) {
+		this.incidenttypecategory = incidenttypecategory;
+	}
+
+
+
+	public String getInitiallatitude() {
+		return initiallatitude;
+	}
+
+
+
+	public void setInitiallatitude(String initiallatitude) {
+		this.initiallatitude = initiallatitude;
+	}
+
+
+
+	public String getInitiallongitude() {
+		return initiallongitude;
+	}
+
+
+
+	public void setInitiallongitude(String initiallongitude) {
+		this.initiallongitude = initiallongitude;
+	}
+
+
+
+	public String getDiscoveryacres() {
+		return discoveryacres;
+	}
+
+
+
+	public void setDiscoveryacres(String discoveryacres) {
+		this.discoveryacres = discoveryacres;
+	}
+
+
+
+	public String getPoolatitude() {
+		return poolatitude;
+	}
+
+
+
+	public void setPoolatitude(String poolatitude) {
+		this.poolatitude = poolatitude;
+	}
+
+
+
+	public String getPoolongitude() {
+		return poolongitude;
+	}
+
+
+
+	public void setPoolongitude(String poolongitude) {
+		this.poolongitude = poolongitude;
+	}
+
+
+
+	public String getPooownerunit() {
+		return pooownerunit;
+	}
+
+
+
+	public void setPooownerunit(String pooownerunit) {
+		this.pooownerunit = pooownerunit;
+	}
+
+
+
+	public String getPoostate() {
+		return poostate;
+	}
+
+
+
+	public void setPoostate(String poostate) {
+		this.poostate = poostate;
+	}
+
+
+
+	public String getPoocounty() {
+		return poocounty;
+	}
+
+
+
+	public void setPoocounty(String poocounty) {
+		this.poocounty = poocounty;
+	}
+
+
+
+	public String getPoolandownerkind() {
+		return poolandownerkind;
+	}
+
+
+
+	public void setPoolandownerkind(String poolandownerkind) {
+		this.poolandownerkind = poolandownerkind;
+	}
+
+
+
+	public String getPoolandownercategory() {
+		return poolandownercategory;
+	}
+
+
+
+	public void setPoolandownercategory(String poolandownercategory) {
+		this.poolandownercategory = poolandownercategory;
+	}
+
+
+
+	public String getFirecoderequested() {
+		return firecoderequested;
+	}
+
+
+
+	public void setFirecoderequested(String firecoderequested) {
+		this.firecoderequested = firecoderequested;
+	}
+
+
+
+	public String getFirecode() {
+		return firecode;
+	}
+
+
+
+	public void setFirecode(String firecode) {
+		this.firecode = firecode;
+	}
+
+
+
+	public String getFsjobcode() {
+		return fsjobcode;
+	}
+
+
+
+	public void setFsjobcode(String fsjobcode) {
+		this.fsjobcode = fsjobcode;
+	}
+
+
+
+	public String getFsoverridecode() {
+		return fsoverridecode;
+	}
+
+
+
+	public void setFsoverridecode(String fsoverridecode) {
+		this.fsoverridecode = fsoverridecode;
+	}
+
+
+
+	public String getIscomplex() {
+		return iscomplex;
+	}
+
+
+
+	public void setIscomplex(String iscomplex) {
+		this.iscomplex = iscomplex;
+	}
+
+
+
+	public String getIsfsassisted() {
+		return isfsassisted;
+	}
+
+
+
+	public void setIsfsassisted(String isfsassisted) {
+		this.isfsassisted = isfsassisted;
+	}
+
+
+
+	public String getIsmultijurisdictional() {
+		return ismultijurisdictional;
+	}
+
+
+
+	public void setIsmultijurisdictional(String ismultijurisdictional) {
+		this.ismultijurisdictional = ismultijurisdictional;
+	}
+
+
+
+	public String getIstrespass() {
+		return istrespass;
+	}
+
+
+
+	public void setIstrespass(String istrespass) {
+		this.istrespass = istrespass;
+	}
+
+
+
+	public String getIsreimbursable() {
+		return isreimbursable;
+	}
+
+
+
+	public void setIsreimbursable(String isreimbursable) {
+		this.isreimbursable = isreimbursable;
+	}
+
+
+
+	public String getFireoutdatetime() {
+		return fireoutdatetime;
+	}
+
+
+
+	public void setFireoutdatetime(String fireoutdatetime) {
+		this.fireoutdatetime = fireoutdatetime;
+	}
+
+
+
+	public String getCreatedbysystem() {
+		return createdbysystem;
+	}
+
+
+
+	public void setCreatedbysystem(String createdbysystem) {
+		this.createdbysystem = createdbysystem;
+	}
+
+
+
+	public String getModifiedbysystem() {
+		return modifiedbysystem;
+	}
+
+
+
+	public void setModifiedbysystem(String modifiedbysystem) {
+		this.modifiedbysystem = modifiedbysystem;
+	}
+
+
+
+	public String getGacc() {
+		return gacc;
+	}
+
+
+
+	public void setGacc(String gacc) {
+		this.gacc = gacc;
+	}
+
+
+
+	public String getIsactive() {
+		return isactive;
+	}
+
+
+
+	public void setIsactive(String isactive) {
+		this.isactive = isactive;
+	}
 	
-	public String getIrwinID() {
-		return IrwinID;
-	}
-	public void setIrwinID(String irwinID) {
-		IrwinID = irwinID;
-	}
-	public String getRecordSource() {
-		return RecordSource;
-	}
-	public void setRecordSource(String recordSource) {
-		RecordSource = recordSource;
-	}
-	public String getCreatedOnDateTime() {
-		return CreatedOnDateTime;
-	}
-	public void setCreatedOnDateTime(String createdOnDateTime) {
-		CreatedOnDateTime = createdOnDateTime;
-	}
-	public String getModifiedOnDateTime() {
-		return ModifiedOnDateTime;
-	}
-	public void setModifiedOnDateTime(String modifiedOnDateTime) {
-		ModifiedOnDateTime = modifiedOnDateTime;
-	}
-	public String getInConflict() {
-		return InConflict;
-	}
-	public void setInConflict(String inConflict) {
-		InConflict = inConflict;
-	}
-	public String getUniqueFireIdentifier() {
-		return UniqueFireIdentifier;
-	}
-	public void setUniqueFireIdentifier(String uniqueFireIdentifier) {
-		UniqueFireIdentifier = uniqueFireIdentifier;
-	}
-	public String getFireDiscoveryDateTime() {
-		return FireDiscoveryDateTime;
-	}
-	public void setFireDiscoveryDateTime(String fireDiscoveryDateTime) {
-		FireDiscoveryDateTime = fireDiscoveryDateTime;
-	}
-	public String getPOOResponsibleUnit() {
-		return POOResponsibleUnit;
-	}
-	public void setPOOResponsibleUnit(String pOOResponsibleUnit) {
-		POOResponsibleUnit = pOOResponsibleUnit;
-	}
-	public String getLocalIncidentIdentifier() {
-		return LocalIncidentIdentifier;
-	}
-	public void setLocalIncidentIdentifier(String localIncidentIdentifier) {
-		LocalIncidentIdentifier = localIncidentIdentifier;
-	}
-	public String getDispatchCenterID() {
-		return DispatchCenterID;
-	}
-	public void setDispatchCenterID(String dispatchCenterID) {
-		DispatchCenterID = dispatchCenterID;
-	}
-	public String getIncidentName() {
-		return IncidentName;
-	}
-	public void setIncidentName(String incidentName) {
-		IncidentName = incidentName;
-	}
-	public String getFireCause() {
-		return FireCause;
-	}
-	public void setFireCause(String fireCause) {
-		FireCause = fireCause;
-	}
-	public String getIncidentTypeKind() {
-		return IncidentTypeKind;
-	}
-	public void setIncidentTypeKind(String incidentTypeKind) {
-		IncidentTypeKind = incidentTypeKind;
-	}
-	public String getIncidentTypeCategory() {
-		return IncidentTypeCategory;
-	}
-	public void setIncidentTypeCategory(String incidentTypeCategory) {
-		IncidentTypeCategory = incidentTypeCategory;
-	}
-	public String getInitialLatitude() {
-		return InitialLatitude;
-	}
-	public void setInitialLatitude(String initialLatitude) {
-		InitialLatitude = initialLatitude;
-	}
-	public String getInitialLongitude() {
-		return InitialLongitude;
-	}
-	public void setInitialLongitude(String initialLongitude) {
-		InitialLongitude = initialLongitude;
-	}
-	public String getDiscoveryAcres() {
-		return DiscoveryAcres;
-	}
-	public void setDiscoveryAcres(String discoveryAcres) {
-		DiscoveryAcres = discoveryAcres;
-	}
-	public String getPOOLatitude() {
-		return POOLatitude;
-	}
-	public void setPOOLatitude(String pOOLatitude) {
-		POOLatitude = pOOLatitude;
-	}
-	public String getPOOLongitude() {
-		return POOLongitude;
-	}
-	public void setPOOLongitude(String pOOLongitude) {
-		POOLongitude = pOOLongitude;
-	}
-	public String getPOOOwnerUnit() {
-		return POOOwnerUnit;
-	}
-	public void setPOOOwnerUnit(String pOOOwnerUnit) {
-		POOOwnerUnit = pOOOwnerUnit;
-	}
-	public String getPOOState() {
-		return POOState;
-	}
-	public void setPOOState(String pOOState) {
-		POOState = pOOState;
-	}
-	public String getPOOCounty() {
-		return POOCounty;
-	}
-	public void setPOOCounty(String pOOCounty) {
-		POOCounty = pOOCounty;
-	}
-	public String getPOOLandownerKind() {
-		return POOLandownerKind;
-	}
-	public void setPOOLandownerKind(String pOOLandownerKind) {
-		POOLandownerKind = pOOLandownerKind;
-	}
-	public String getPOOLandownerCategory() {
-		return POOLandownerCategory;
-	}
-	public void setPOOLandownerCategory(String pOOLandownerCategory) {
-		POOLandownerCategory = pOOLandownerCategory;
-	}
-	public String getFirecodeRequested() {
-		return FirecodeRequested;
-	}
-	public void setFirecodeRequested(String firecodeRequested) {
-		FirecodeRequested = firecodeRequested;
-	}
-	public String getFireCode() {
-		return FireCode;
-	}
-	public void setFireCode(String fireCode) {
-		FireCode = fireCode;
-	}
-	public String getFSJobCode() {
-		return FSJobCode;
-	}
-	public void setFSJobCode(String fSJobCode) {
-		FSJobCode = fSJobCode;
-	}
-	public String getFSOverrideCode() {
-		return FSOverrideCode;
-	}
-	public void setFSOverrideCode(String fSOverrideCode) {
-		FSOverrideCode = fSOverrideCode;
-	}
-	public String getIsComplex() {
-		return IsComplex;
-	}
-	public void setIsComplex(String isComplex) {
-		IsComplex = isComplex;
-	}
-	public String getIsFSAssisted() {
-		return IsFSAssisted;
-	}
-	public void setIsFSAssisted(String isFSAssisted) {
-		IsFSAssisted = isFSAssisted;
-	}
-	public String getIsMultiJurisdictional() {
-		return IsMultiJurisdictional;
-	}
-	public void setIsMultiJurisdictional(String isMultiJurisdictional) {
-		IsMultiJurisdictional = isMultiJurisdictional;
-	}
-	public String getIsTrespass() {
-		return IsTrespass;
-	}
-	public void setIsTrespass(String isTrespass) {
-		IsTrespass = isTrespass;
-	}
-	public String getIsReimbursable() {
-		return IsReimbursable;
-	}
-	public void setIsReimbursable(String isReimbursable) {
-		IsReimbursable = isReimbursable;
-	}
-	public String getFireOutDateTime() {
-		return FireOutDateTime;
-	}
-	public void setFireOutDateTime(String fireOutDateTime) {
-		FireOutDateTime = fireOutDateTime;
-	}
-	public String getCreatedBySystem() {
-		return CreatedBySystem;
-	}
-	public void setCreatedBySystem(String createdBySystem) {
-		CreatedBySystem = createdBySystem;
-	}
-	public String getModifiedBySystem() {
-		return ModifiedBySystem;
-	}
-	public void setModifiedBySystem(String modifiedBySystem) {
-		ModifiedBySystem = modifiedBySystem;
-	}
-	public String getGACC() {
-		return GACC;
-	}
-	public void setGACC(String gACC) {
-		GACC = gACC;
-	}
-	public String getIsActive() {
-		return IsActive;
-	}
-	public void setIsActive(String isActive) {
-		IsActive = isActive;
-	}
+
 }
